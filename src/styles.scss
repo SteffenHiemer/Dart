@@ -1,0 +1,22 @@
+* {
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: .5px;
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  background: rgb(34, 34, 34);
+  background: linear-gradient(145deg,  rgb(4, 51, 11) 0%, rgba(0, 0, 0, 1) 50%, rgb(58, 4, 4) 100%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+app-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}

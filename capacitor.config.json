@@ -1,0 +1,14 @@
+{
+  "appId": "com.dartcheckout.app",
+  "appName": "dart-checkout",
+  "bundledWebRuntime": false,
+  "webDir": "dist/dart-checkout",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}

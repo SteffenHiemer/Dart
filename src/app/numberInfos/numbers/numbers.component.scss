@@ -1,0 +1,36 @@
+:host {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+ul {
+   font-weight: normal;
+   width: 100%;
+   flex-wrap: wrap;
+   display: flex;
+   padding: 0;
+   margin-top: 0;
+   li {
+     width: calc(100% / 10);
+     list-style-type: none;
+     text-decoration: none;
+     padding: .125rem;
+     box-sizing: border-box;
+     a {
+       padding: 1rem;
+       text-decoration: none;
+       aspect-ratio: 1/1;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: rgba(255, 255, 255, .1);
+       transition: background-color .33s ease, box-shadow .33s ease;
+       position: relative;
+       &:hover {
+         background-color: rgba(255, 255, 255, .5);
+         box-shadow: 0 0 32px 0 black;
+         z-index: 999;
+       }
+     }
+   }
+ }
