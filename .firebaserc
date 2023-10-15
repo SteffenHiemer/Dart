@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dart-e2d98": {
+      "hosting": {
+        "dart-checkout": [
+          "dart-e2d98"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dart-e2d98"
+  }
+}

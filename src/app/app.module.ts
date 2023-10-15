@@ -19,9 +19,36 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
 import { DartboardComponent } from './dartboard/dartboard.component';
 import { BackToMainComponent } from './navigation/header/back-to-main/back-to-main.component';
 import { TestPipe } from './pipes/test.pipe';
-
+import { LogoComponent } from './navigation/logo/logo.component';
+import { LoginComponent } from './pages/login/login.component';
+import { HttpClientModule } from "@angular/common/http";
+import { HttpService } from "./pages/login/http.service";
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import {ReactiveFormsModule} from "@angular/forms";
+import {AuthService} from "./shared/auth.service";
+import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+//
+// import * as firebase from 'firebase';
+// firebase.initializeApp(environment.firebase);
 
 @NgModule({
+  imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    BrowserModule,
+    AppRoutingModule,
+    routing,
+    StoreModule.forRoot({numbers: numbersReducer}),
+    HttpClientModule,
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideAuth(() => getAuth()),
+    // provideDatabase(() => getDatabase()),
+    ReactiveFormsModule,
+  ],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -36,15 +63,13 @@ import { TestPipe } from './pipes/test.pipe';
     UserProfileComponent,
     DartboardComponent,
     BackToMainComponent,
-    TestPipe
+    TestPipe,
+    LogoComponent,
+    LoginComponent,
+
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    routing,
-    StoreModule.forRoot({ numbers: numbersReducer })
-  ],
-  providers: [],
+
+  providers: [HttpService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

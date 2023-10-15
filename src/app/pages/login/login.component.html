@@ -1,0 +1,33 @@
+<!--<button (click)="onSubmit('username1', 'email@web.de', 'password123')">-->
+<!--  Lets send-->
+<!--</button>-->
+
+user:
+{{ getUser()}}
+
+<form [formGroup]="myForm" (ngSubmit)="onSignin()">
+  <div class="d-flex">
+    <input type="text" formControlName="username" placeholder="Enter Username" name="uname" required>
+    <input type="text" formControlName="email" placeholder="Enter Email" name="email" required>
+    <input type="password" formControlName="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="mt-4">Login</button>
+<!--    <label>-->
+<!--      <input type="checkbox" checked="checked" name="remember"> Remember me-->
+<!--    </label>-->
+  </div>
+
+<!--  <div class="container" style="background-color:#f1f1f1">-->
+<!--    <button type="button" class="cancelbtn">Cancel</button>-->
+<!--    <span class="psw">Forgot <a href="#">password?</a></span>-->
+<!--  </div>-->
+</form>
+
+auth:
+{{ getAuthStatus() }}
+<!--<button  (click)="register('username1', 'email@web.de', 'password123')">-->
+<!--  Lets send-->
+<!--</button>-->
+
+
+<button (click)="onSignOut()"> SignOut</button>

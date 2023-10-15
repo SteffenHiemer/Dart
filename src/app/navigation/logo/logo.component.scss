@@ -1,0 +1,7 @@
+$sizes: 12;
+
+@for $size from 1 through $sizes {
+  .size-#{$size} {
+    height: $size + rem;
+  }
+}

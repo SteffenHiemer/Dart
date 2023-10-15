@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "dart-checkout",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
