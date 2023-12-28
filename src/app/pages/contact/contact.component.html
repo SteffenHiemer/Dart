@@ -1,0 +1,26 @@
+<form  [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="col">
+
+  <input
+    type="text"
+    id="name"
+    class="form-control"
+    formControlName="name"
+    placeholder="Name"
+  >
+  </div>
+  <div class="col">
+
+  <input
+    type="text"
+    id="message"
+    class="form-control"
+    formControlName="name"
+  placeholder="Message">
+  </div>
+
+  <button>Submit</button>
+
+  enter:
+  {{ formSubmit }}
+</form>
