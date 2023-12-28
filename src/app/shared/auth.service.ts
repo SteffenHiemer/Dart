@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import {User} from "./user.interface";
 import { AngularFireAuth} from "@angular/fire/compat/auth";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class AuthService {
 
   user: object;
 
-  constructor(private auth: AngularFireAuth) {
+  constructor(private auth: AngularFireAuth, private router: Router) {
     this.auth.authState.subscribe((user) => {
       this.user = user;
     });
@@ -29,7 +30,9 @@ export class AuthService {
         user.email,
         user.password)
       .then(
-        (data) => console.log(data))
+        () => {
+          this.router.navigate(['/']);
+        })
       .catch((error) => console.error(error))
       .finally()
   }
