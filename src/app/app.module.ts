@@ -18,7 +18,7 @@ import { GameComponent } from './game/game.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
 import { DartboardComponent } from './dartboard/dartboard.component';
 import { BackToMainComponent } from './navigation/header/back-to-main/back-to-main.component';
-import { TestPipe } from './pipes/test.pipe';
+import {KeysPipe, TestPipe} from './pipes/test.pipe';
 import { LogoComponent } from './navigation/logo/logo.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from "@angular/common/http";
@@ -31,6 +31,11 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {AuthService} from "./shared/auth.service";
 import {AngularFireModule} from "@angular/fire/compat";
 import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {ContactComponent} from "./pages/contact/contact.component";
+import { ImpressumComponent } from './pages/impressum/impressum.component';
+import { AgbComponent } from './pages/agb/agb.component';
+import { DatenschutzComponent } from './pages/datenschutz/datenschutz.component';
+import { BackButtonWithFooterComponent } from './layout/back-button-with-footer/back-button-with-footer.component';
 //
 // import * as firebase from 'firebase';
 // firebase.initializeApp(environment.firebase);
@@ -51,6 +56,7 @@ import {AngularFireAuthModule} from "@angular/fire/compat/auth";
   ],
   declarations: [
     AppComponent,
+    ContactComponent,
     HeaderComponent,
     FooterComponent,
     NumberComponent,
@@ -64,8 +70,13 @@ import {AngularFireAuthModule} from "@angular/fire/compat/auth";
     DartboardComponent,
     BackToMainComponent,
     TestPipe,
+    KeysPipe,
     LogoComponent,
     LoginComponent,
+    ImpressumComponent,
+    AgbComponent,
+    DatenschutzComponent,
+    BackButtonWithFooterComponent,
 
   ],
 
