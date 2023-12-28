@@ -7,61 +7,18 @@
 </div>
 
 <hr>
-<h3>Single Out</h3>
-
-<hr>
-<h3>Master Out</h3>
-
-<hr>
-<h3>Double Out</h3>
-
-
-<ul>
- <li  *ngIf="numbers['doubleOut'][number]['1']['1'] != null">
-   <div class="throw-darts">
-     <span  class="dart-throw">
-       {{ numbers['doubleOut'][number]["1"]["1"]  }}
-     </span>
-   </div>
- </li>
-
-  <li  *ngIf="numbers['doubleOut'][number]['1'][1] != null">
-    <div class="throw-darts">
-      <span class="dart-throw">
-            {{ numbers['doubleOut'][number]["2"]["1"]  }}
-      </span>
-      <span class="dart-throw">
-            {{ numbers['doubleOut'][number]["2"]["2"]  }}
-      </span>
-    </div>
+<ul *ngFor="let checkout of [numbers[number]['single'],numbers[number]['double'], numbers[number]['triple']], let i = index">
+  <li>
+    <h3 *ngIf="i === 0">Single Out</h3>
+    <h3 *ngIf="i === 1">Double Out</h3>
+    <h3 *ngIf="i === 2">Triple Out</h3>
   </li>
-
-  <li *ngIf="!numbers['doubleOut'][number]['2']['1']">
-    <div *ngIf="numbers['doubleOut'][number]['3'][0]">
-      <div *ngFor="let check of numbers['doubleOut'][number]['3']" class="throw-darts">
-        <span class="dart-throw">
-                {{ check[1] }}
-             </span>
-        <span class="dart-throw">
-                {{ check[2] }}
-             </span>
-        <span class="dart-throw">
-                {{ check[3]}}
-        </span>
-      </div>
+  <li *ngFor="let amountOfDarts of checkout">
+    <div *ngFor="let possibility of amountOfDarts" class="throw-darts">
+     <span *ngFor="let dart of possibility" class="dart-throw"  [attr.data-target]="dart.includes('t')  ? 'triple' : dart.includes('d') ? 'double' : 'single'">
+         {{ dart }}
+     </span>
     </div>
-
-      <div *ngIf="!numbers['doubleOut'][number]['3'][0] && numbers['doubleOut'][number]['3']['1']" class="throw-darts">
-        <span class="dart-throw">
-            {{ numbers['doubleOut'][number]["3"]["1"]  }}
-      </span>
-        <span class="dart-throw">
-            {{ numbers['doubleOut'][number]["3"]["2"]  }}
-      </span>
-        <span class="dart-throw">
-            {{ numbers['doubleOut'][number]["3"]["3"]  }}
-      </span>
-      </div>
   </li>
 </ul>
 

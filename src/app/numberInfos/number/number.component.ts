@@ -19,6 +19,11 @@ export class NumberComponent {
     this.number = 0;
   }
 
+getInfo(json) {
+  console.log(json)
+  return JSON.stringify(json);
+}
+
 
 ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -42,8 +47,6 @@ ngOnInit() {
   }
 
   numbers: {[index: string]:any} = {
-    singleOut: {},
-    doubleOut: {
       1: {
         1: [],
         2: [],
@@ -343,6 +346,21 @@ ngOnInit() {
         }
       },
       25: {
+        'single' : [
+          [['25']],
+          [['5','20']],
+          [],
+        ],
+        'double' : [
+          [],
+          [["1", "d12"],["9","d8"], ["9","d8"]],
+          [],
+        ],
+        'triple' : [
+          [],
+           [["1","d12"],["9","d8"]],
+           []
+        ],
         1: [],
         2: {
           1: "9",
@@ -1052,9 +1070,21 @@ ngOnInit() {
         3: []
       },
       120: {
-        1: [],
-        2: [],
-        3: []
+        'single': [
+          [],
+          [['T20', 'T20']],
+          [['T20', 'd20', '20']],
+        ],
+        'double': [
+          [],
+          [],
+          [['t20', '20', 'd20'], ['d20', 'd20', 'd20']]
+        ],
+        'triple' : [
+          [],
+          [['t20', 't20']],
+          [['20', '50', '50']]
+        ]
       },
       121: {
         1: [],
@@ -1154,7 +1184,7 @@ ngOnInit() {
       140: {
         1: [],
         2: [],
-        3: []
+        'triple':         [['t20', 'd20', 'd20'],['50', '50', 'd20']]
       },
       141: {
         1: [],
@@ -1356,8 +1386,6 @@ ngOnInit() {
         2: [],
         3: []
       }
-    },
-    masterOut: {}
 }
 
   // number =  Math.floor(Math.random() * 180);

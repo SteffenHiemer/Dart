@@ -11,7 +11,6 @@ import { ColorsOfNumbersService } from '../../colors-of-numbers.service';
           <a [routerLink]="['/number/' + number]">{{ number}}</a>
         </li>
       </ul>
-
     </div>`,
   styleUrls: ['./numbers.component.scss'],
 

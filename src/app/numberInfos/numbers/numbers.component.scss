@@ -1,5 +1,5 @@
 :host {
-  overflow: hidden;
+  overflow-x: hidden;
   max-width: 100%;
 }
 
@@ -8,26 +8,30 @@ ul {
    width: 100%;
    flex-wrap: wrap;
    display: flex;
-   padding: 0;
    margin-top: 0;
+  padding: 1rem;
    li {
      width: calc(100% / 10);
      list-style-type: none;
      text-decoration: none;
-     padding: .125rem;
+     padding: 1px;
      box-sizing: border-box;
      a {
-       padding: 1rem;
+       font-size: .875rem;
+       margin: 0;
+       padding: .5rem .25rem;
        text-decoration: none;
-       aspect-ratio: 1/1;
        display: flex;
+       aspect-ratio: 1/1;
        justify-content: center;
        align-items: center;
-       background-color: rgba(255, 255, 255, .1);
+       background-color: rgba(200, 200, 200, .05);
        transition: background-color .33s ease, box-shadow .33s ease;
        position: relative;
+       box-sizing: border-box;
+       min-height: auto;
        &:hover {
-         background-color: rgba(255, 255, 255, .5);
+         background-color: rgba(200, 200, 200, .1);
          box-shadow: 0 0 32px 0 black;
          z-index: 999;
        }
