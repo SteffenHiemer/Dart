@@ -8,6 +8,8 @@ import { Component, Input } from '@angular/core';
 export class LogoComponent {
  private _size: number = 1;
 
+  @Input() mt: number = 0;
+  @Input() mb: number = 0;
   @Input()
   get size(): number {
     return this._size || 1;
