@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">dart-checkout</string>
-    <string name="title_activity_main">dart-checkout</string>
-    <string name="package_name">com.dartcheckout.app</string>
-    <string name="custom_url_scheme">com.dartcheckout.app</string>
-</resources>
