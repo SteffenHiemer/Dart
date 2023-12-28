@@ -1,33 +1,16 @@
-<!--<button (click)="onSubmit('username1', 'email@web.de', 'password123')">-->
-<!--  Lets send-->
-<!--</button>-->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>
 
-user:
-{{ getUser()}}
 
-<form [formGroup]="myForm" (ngSubmit)="onSignin()">
-  <div class="d-flex">
-    <input type="text" formControlName="username" placeholder="Enter Username" name="uname" required>
+
+<form [formGroup]="myForm" (ngSubmit)="onSignin()" *ngIf="!loggedIn">
     <input type="text" formControlName="email" placeholder="Enter Email" name="email" required>
     <input type="password" formControlName="password" placeholder="Enter Password" name="psw" required>
 
     <button type="submit" class="mt-4">Login</button>
-<!--    <label>-->
-<!--      <input type="checkbox" checked="checked" name="remember"> Remember me-->
-<!--    </label>-->
-  </div>
-
-<!--  <div class="container" style="background-color:#f1f1f1">-->
-<!--    <button type="button" class="cancelbtn">Cancel</button>-->
-<!--    <span class="psw">Forgot <a href="#">password?</a></span>-->
-<!--  </div>-->
 </form>
 
-auth:
-{{ getAuthStatus() }}
-<!--<button  (click)="register('username1', 'email@web.de', 'password123')">-->
-<!--  Lets send-->
-<!--</button>-->
 
-
-<button (click)="onSignOut()"> SignOut</button>
+<button *ngIf="loggedIn" (click)="onSignOut()">SignOut</button>

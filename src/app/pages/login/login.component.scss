@@ -4,15 +4,25 @@
 }
 
 form {
-  label {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
-  }
   input {
+    margin-top: 1rem;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid lightgrey;
     outline: none;
-    padding: 1rem;
+    padding: 1rem 1rem .5rem 1rem;
+    text-align: center;
+  }
+
+  button {
+    margin-top: 2rem;
   }
 }
 
