@@ -1,14 +1,11 @@
 * {
-  color: white;
-  font-family: sans-serif;
-  letter-spacing: .5px;
-  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   background: rgb(34, 34, 34);
-  background: linear-gradient(145deg,  rgb(4, 51, 11) 0%, rgba(0, 0, 0, 1) 50%, rgb(58, 4, 4) 100%);
+  background: linear-gradient(145deg,  rgb(1, 31, 6) 0%, rgba(0, 0, 0, 1) 50%, rgb(30, 1, 1) 100%);
   background-repeat: no-repeat;
   min-height: 100vh;
 }
