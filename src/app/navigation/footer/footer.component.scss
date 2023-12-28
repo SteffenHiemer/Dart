@@ -1,0 +1,28 @@
+footer {
+  border-top: 1px solid #323232;
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    li {
+      list-style-type: none;
+      flex-grow: 1;
+      a {
+        text-decoration: none;
+        width: auto;
+        background-color: transparent;
+        color: #323232;
+        margin: 0;
+        padding: .5rem;
+        min-height: auto;
+        transition: color .33s ease;
+        font-size: small;
+        display: flex;
+        gap: .5rem;
+        &:hover {
+          color: #7e7e7e;
+        }
+      }
+    }
+  }
+}
