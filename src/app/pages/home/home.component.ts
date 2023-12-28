@@ -2,11 +2,7 @@ import { Component} from "@angular/core";
 
 @Component({
   template: `
-
-    <app-logo [size]="6"/>
-
-    <h1> YOUR DART APP</h1>
-    <h2>Willkommen</h2>
+    <app-logo [size]="12" [mt]="2" [mb]="2"/>
 
     <ul>
       <li>
@@ -22,6 +18,8 @@ import { Component} from "@angular/core";
         <a [routerLink]="['/login']">Login</a>
       </li>
     </ul>
+
+    <app-footer />
   `,
   styleUrls: ['home.component.scss']
 })
