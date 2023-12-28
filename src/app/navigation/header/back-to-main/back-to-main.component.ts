@@ -3,37 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-back-to-main',
   template: `
+    <div class="container">
       <a [routerLink]="['']">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+        <svg width="20" height="20" viewBox="0 0 267 198" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"  clip-rule="evenodd" d="M104.115 0H99.1489L95.6352 3.50912L8.52032 90.5091L0.0182343 99L8.52032 107.491L95.6352 194.491L99.1489 198H104.115H255H267V186V99V55.5V12V0H255H104.115ZM45.9976 87L109.081 24H226.002L162.919 87H45.9976ZM202.963 150.991L226.002 174H109.081L45.9976 111H162.919L202.963 150.991Z" />
         </svg>
+        <h1>Headline</h1>
       </a>
+    </div>
   `,
-  styles: [
-
-    'a { ' +
-      'width: 100%;' +
-    'padding: .5rem;' +
-    'background: rgb(255,255,255);' +
-    'background: linear-gradient(150deg, rgba(255,255,255,.025) 0%, rgba(255,255,255,0) 100%);' +
-      'display: block;' +
-
-      'text-align: left;' +
-      '&:hover {' +
-      'svg { ' +
-        'path { ' +
-        'color: rgba(255,255,255, 1) ' +
-        '}' +
-      '}' +
-    '}' +
-      'svg { ' +
-    'display: block;' +
-        'path { ' +
-          'color: rgba(255,255,255, .75) ' +
-          '}' +
-      '}' +
-    '}'
-  ],
+  styleUrls: ['/back-to-main.component.scss'],
 })
 export class BackToMainComponent {
 
